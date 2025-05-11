@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500&display=swap');
+
+html, body {
+  background-color: #060606;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+/* Reset and base */
+* {
+  font-family: 'Poppins', Roboto, serif, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  list-style-type: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #060606;
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+}
+
+
+p, span, li, .nav-link {
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+} 
+/* Headings and text sizes using clamp */
+/* h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+p {
+  font-size: clamp(1rem, 2.5vw, 1.125rem);
+} */
+
+.orange-clr {
+  color: var(--chakra-colors-orange);
+}
+
+.c-pale-blue {
+  color: var(--chakra-pale-blue-color);
+}
+
+.bgc-pale-blue {
+  background-color: var(--chakra-pale-blue-color);
+}
+
+/* Common Btn */
+.btn-primary {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 500;
+  max-width: fit-content;
+  margin: 0 15px 0 0;
+  padding: .8rem 2.8rem .8rem 2rem;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  background-clip: padding-box;
+  transform: scale(1);
+  filter: drop-shadow(rgba(31, 213, 249, 0.25) 0px 0px 8px);
+  cursor: pointer;
+  position: relative;
+}
+
+.btn-primary:hover {
+  background: #f28134;
+  color: #fff;
+  border-radius: 8px;
+  filter: drop-shadow(rgba(31, 213, 249, 0.25) 0px 0px 8px);
+}
+
+.gradient-btn-primary {
+  border: none;
+  border-image: linear-gradient(90deg, #f28134, #268ae3) 1;
+}
+
+.gradient-btn-primary:hover {
+  background: linear-gradient(90deg, #f28134, #268ae3);
+  color: #fff;
+  border-radius: 8px;
+  filter: drop-shadow(rgba(31, 213, 249, 0.25) 0px 0px 8px);
+}
+
+.gradient-btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #f28134, #268ae3);
+  border-radius: 8px;
+  z-index: -1;
+  padding: 2px; /* simulate border thickness */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.learn-more-no-brd {
+  background: none !important;
+  border: none;
+}
+
+.learn-more-no-brd:hover {
+  color: #f28134;
+}
+
+:root {
+  
+  /* Font sizes */
+  --font-display: clamp(1.2rem, 5vw, 3rem); /* Huge title, Hero text */
+  --font-h1: clamp(1.6rem, 3vw, 2.8px); /* Main headings */
+  --font-h2: clamp(24px, 3vw, 36px); /* Section headings */
+  --font-h3: clamp(22px, 3vw, 32px); /* Subheadings */
+  --font-h4: clamp(18px, 3vw, 28px); /* Small headings */
+  --font-h5: clamp(16px, 3vw, 26px); /* Medium headings */
+  --font-body-lg: clamp(10px, 3vw, 18px); /* Large body text */
+  --font-body: clamp(1rem, 2vw, 1.2rem); /* Default body text */
+  --font-small: 12px; /* Small captions or metadata */
+
+
+  /* Colors */ 
+
+  --chakra-colors-chakra-body-text: var(--chakra-colors-whiteAlpha-900);
+  --chakra-colors-chakra-body-bg: var(--chakra-colors-gray-800);
+  --chakra-colors-chakra-border-color: var(--chakra-colors-whiteAlpha-300);
+  --chakra-colors-chakra-inverse-text: var(--chakra-colors-gray-800);
+  --chakra-colors-chakra-subtle-bg: var(--chakra-colors-gray-700);
+  --chakra-colors-chakra-subtle-text: var(--chakra-colors-gray-400);
+  --chakra-colors-chakra-placeholder-color: var(--chakra-colors-whiteAlpha-400);
+
+  --chakra-colors-black: #000000;
+  --chakra-colors-white: #FFFFFF;
+  --chakra-colors-whiteAlpha-50: rgba(255, 255, 255, 0.04);
+  --chakra-colors-whiteAlpha-100: rgba(255, 255, 255, 0.06);
+  --chakra-colors-whiteAlpha-200: rgba(255, 255, 255, 0.08);
+  --chakra-colors-whiteAlpha-300: rgba(255, 255, 255, 0.16);
+  --chakra-colors-whiteAlpha-400: rgba(255, 255, 255, 0.24);
+  --chakra-colors-whiteAlpha-500: rgba(255, 255, 255, 0.36);
+  --chakra-colors-whiteAlpha-600: rgba(255, 255, 255, 0.48);
+  --chakra-colors-whiteAlpha-700: rgba(255, 255, 255, 0.64);
+  --chakra-colors-whiteAlpha-800: rgba(255, 255, 255, 0.80);
+  --chakra-colors-whiteAlpha-900: rgba(255, 255, 255, 0.92);
+  --chakra-colors-blackAlpha-50: rgba(0, 0, 0, 0.04);
+  --chakra-colors-blackAlpha-100: rgba(0, 0, 0, 0.06);
+  --chakra-colors-blackAlpha-200: rgba(0, 0, 0, 0.08);
+  --chakra-colors-blackAlpha-300: rgba(0, 0, 0, 0.16);
+  --chakra-colors-blackAlpha-400: rgba(0, 0, 0, 0.24);
+  --chakra-colors-blackAlpha-500: rgba(0, 0, 0, 0.36);
+  --chakra-colors-blackAlpha-600: rgba(0, 0, 0, 0.48);
+  --chakra-colors-blackAlpha-700: rgba(0, 0, 0, 0.64);
+  --chakra-colors-blackAlpha-800: rgba(0, 0, 0, 0.80);
+  --chakra-colors-blackAlpha-900: rgba(0, 0, 0, 0.92);
+  --chakra-colors-gray-50: #F7FAFC;
+  --chakra-colors-gray-100: #EDF2F7;
+  --chakra-colors-gray-200: #E2E8F0;
+  --chakra-colors-gray-300: #CBD5E0;
+  --chakra-colors-gray-400: #A0AEC0;
+  --chakra-colors-gray-500: #718096;
+  --chakra-colors-gray-600: #4A5568;
+  --chakra-colors-gray-700: #2D3748;
+  --chakra-colors-gray-800: #1A202C;
+  --chakra-colors-gray-900: #171923;
+
+  --chakra-colors-red-50: #FFF5F5;
+  --chakra-colors-orange: #f28134;
+}

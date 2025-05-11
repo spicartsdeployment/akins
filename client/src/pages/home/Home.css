@@ -1,0 +1,571 @@
+/* ===== Hero Section ===== */
+.hero {
+  padding: 2rem 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* position: absolute; */
+  text-align: center;
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+.strategy-section-cont {
+  margin-bottom: 4rem;
+}
+
+.drone-acquisition-section-cont {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 7rem;
+}
+
+.rec-section-cont,
+.strategy-section-cont,
+.drone-acq-cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1,
+.rec-section-cont h1,
+.strategy-section-cont h1,
+.drone-acq-cont h1,
+.insight-section h1,
+.testimonial-title {
+  font-size: var(--font-display);
+  font-weight: 200;
+  margin: 0;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+}
+
+.hero-content p,
+.rec-section-cont p,
+.strategy-section-cont p .drone-acq-cont p {
+  font-size: 1.2rem;
+  margin: 2rem 0;
+  max-width: 70%;
+}
+
+/* Drone aquisition */
+.drone-acquisition-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+  /* padding: 4rem; */
+  margin: 0 0 8rem 0;
+  /* background-color: #232323; */
+  /* border-radius: 12px; */
+  /* overflow: hidden; */
+  /* transition: all 0.3s ease; */
+
+}
+
+.drone-acq-feature-card {
+  padding: 1.2rem 2rem;
+  border: 2px solid transparent;
+  /* Needed for the trick */
+  border-radius: 8px;
+  background-image:
+    linear-gradient(#060606, #060606),
+    /* Inner (button fill) */
+    linear-gradient(to right, #f28134, #268ae3);
+  /* Outer (border) */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 8px;
+  margin: 3rem 0;
+}
+
+.acq-title {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.acq-header {
+  font-size: 1.2rem;
+  font-weight: 200;
+  margin: 1rem 0 0 0;
+}
+
+.acq-description {
+  font-size: 0.9rem;
+  font-weight: 100;
+  margin: 0 0 1rem 0;
+}
+
+.acq-feature-desc {
+  text-align: left;
+}
+
+.acq-feature-img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+
+/* Insight Section */
+.insight-section {
+  text-align: center;
+  width: 100%;
+  margin: 0 0 8rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.insight-section h1 {
+  margin-bottom: 2rem;
+}
+
+.insight-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.insight-card {
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  border: 1px solid #666;
+  border-radius: 8px;
+}
+
+.insights-description {
+  font-size: 1rem;
+  font-weight: 100;
+  margin: 0 0 1rem 0;
+}
+
+.insight-img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+/* Testimonials */
+.testimonial-section {
+  margin: 0 auto 4rem;
+  padding: 2rem 7rem;
+  text-align: center;
+  background-color: #1e1e1e;
+}
+
+.testimonial-title {
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  /* background: #ffffff; */
+  border-radius: 12px;
+  padding: 30px 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-text {
+  font-style: italic;
+  /* color: #555; */
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-weight: 100;
+}
+
+.testimonial-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #eee;
+}
+
+.testimonial-name {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+.testimonial-role {
+  font-size: 0.95rem;
+  font-weight: 100;
+}
+
+
+
+/* Home Enquiry */
+.home-enquiry-section-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 7rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.home-enquiry-section-cont h1,
+.home-enq-ino,
+.home-enq-akin {
+  font-size: 4.5rem;
+  font-weight: 100 !important;
+}
+
+.home-enq-ino {
+  color: #f28134;
+  font-weight: 200 !important;
+}
+
+.home-enq-akin {
+  color: #268ae3;
+  font-weight: 200 !important;
+}
+
+
+/* Tranform Home text */
+.heading {
+  font-size: 3.8rem;
+  font-weight: 200;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.gradient-roller {
+  display: inline-block;
+  position: relative;
+  top: 0.8rem;
+  height: 3.5rem; /* Match line-height / font-size */
+  overflow: hidden;
+  text-align: left;
+  /* vertical-align: bottom; */
+}
+
+.roller-track {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  animation: rollGradientText 8s infinite;
+}
+
+.roller-track span {
+  height: 5rem;
+  line-height: 5rem;
+  display: block;
+  font-weight: 200;
+  background: linear-gradient(to right, #f28134, #268ae3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animation keyframes to roll up one by one */
+@keyframes rollGradientText {
+  0%   { transform: translateY(-5%); }
+  20%  { transform: translateY(-5%); }
+
+  25%  { transform: translateY(-30%); }
+  45%  { transform: translateY(-30%); }
+
+  50%  { transform: translateY(-55%); }
+  70%  { transform: translateY(-55%); }
+
+  75%  { transform: translateY(-81%); }
+  95%  { transform: translateY(-81%); }
+
+  100% { transform: translateY(-5%); }
+}
+
+
+/* Common Styles */
+.gradient-text {
+  background: linear-gradient(to right, #f28134, #268ae3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 3.8rem;
+  font-weight: 200;
+}
+
+.hero-main-btns-cont {
+  display: flex;
+}
+
+
+
+.right-arrow-icon {
+  position: absolute;
+  top: 35%;
+  right: 20px;
+  font-size: 0.8rem;
+}
+
+/* .hero h1 {
+  font-size: var(--font-display);
+  font-weight: 200;
+  margin: 0;
+}
+
+.hero p {
+  font-size: var(--font-body);
+  max-width: 90%;
+} */
+
+.hero-buttons-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  margin: 2rem 0;
+  gap: 20px;
+}
+
+.hero-btns {
+  color: #000;
+  font-weight: 500;
+  margin: 0 15px 0 0;
+  padding: .5rem 2rem;
+  border-radius: 4px;
+  border: none;
+  transform: scale(1);
+  filter: drop-shadow(rgba(31, 213, 249, 0.25) 0px 0px 8px);
+  cursor: pointer;
+}
+
+
+
+/* Akin Facilities Section */
+.akin-features {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin: 0 0 8rem 0;
+}
+
+.feature-card {
+  width: 85%;
+  padding: 40px 30px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 20px rgba(31, 213, 249, 0.15);
+}
+
+.feature-card .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "desc img";
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  /* border: 1px solid #222; */
+  background-color: #010101;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  /* align-items: center; */
+}
+
+.feature-card.odd .content {
+  grid-template-areas: "img desc";
+}
+
+/* Grid areas */
+.feature-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  position: relative;
+  padding: 20px;
+}
+
+.feature-image {
+  grid-area: img;
+  text-align: center;
+}
+
+/* Image */
+.feature-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: contain;
+  border: 1px solid #222;
+}
+
+
+
+
+/* ********************************************************************* */
+
+.home-titles {
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+.home-sm-titles {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.home-descs {
+  font-size: 1.5rem;
+  margin: 2rem;
+}
+
+.special-text {
+  color: #f28134;
+}
+
+.home-main-section,
+.home-recognized-section {
+  /* width: 100%; */
+  text-align: center;
+  padding: 10rem;
+}
+
+.home-main-title,
+.home-main-title span {
+  font-size: 4rem;
+  font-weight: 200;
+}
+
+.home-main-title span {
+  background: linear-gradient(to right, #f28134, #268ae3);
+  -webkit-background-clip: text;
+  /* For Safari */
+  background-clip: text;
+  color: transparent;
+}
+
+.home-main-description {
+  font-size: 1.5rem;
+  margin: 4rem;
+}
+
+/* media queries */
+@media (max-width: 767px) {
+
+  .hero {
+    padding: 0rem 4rem;
+    height: 100vh;
+  }
+
+  .hero-content p {
+    font-size: var(--font-body);
+    max-width: 80%;
+  }
+
+  .hero-content p,
+  .rec-section-cont p,
+  .strategy-section-cont p {
+    max-width: 100%;
+  }
+  .gradient-roller {
+    top: 0.5rem;
+  }
+
+  .hero-content h1,
+  .gradient-text {
+    font-size: 2rem;
+  }
+
+  .home-section-container {
+    padding: 2rem 1rem;
+    /* min-height: 100vh; */
+  }
+
+  .home-main-section,
+  .home-recognized-section {
+    /* width: 100%; */
+    text-align: center;
+    padding: 10rem 0rem;
+  }
+
+  /* Akin Features */
+  .feature-card .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .feature-card {
+    padding: 20px;
+  }
+
+  /* Drone Aqu */
+  .drone-acquisition-section-cont {
+    padding: 2rem;
+  }
+  .drone-acquisition-section {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-section-cont {
+    padding: 0 3rem;
+  }
+
+  /* Insights */
+  .insight-section {
+    /* padding: 2rem; */
+  }
+
+  .insight-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonials */
+  .testimonial-section {
+    padding: 2rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Enquiry */
+  .home-enquiry-section-cont h1,
+  .home-enq-ino,
+  .home-enq-akin {
+    font-size: 3rem;
+  }
+
+  .home-enquiry-section-cont button {
+    margin: 2rem 1rem 0 0;
+  }
+
+}
