@@ -4,7 +4,7 @@ import { FaAngleDown, FaAngleRight } from "react-icons/fa6";
 import { dropdownOptions, IMAGES } from "../constant";
 import './navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ onBookDemoClick }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -47,6 +47,10 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     if (!isMobile) setHoveredDropdown(null);
   };
+
+  const handleBookDemo = () => {
+     if (onBookDemoClick) onBookDemoClick();
+  }
 
   return (
     <nav className="navbar">
@@ -101,7 +105,8 @@ const Navbar = () => {
 
       <div className="right-section">
         <div className="nav-buttons">
-          <Link to="/contact" className="btn-primary gradient-btn-primary home-bk-demo">Book Demo</Link>
+          {/* <Link to="/contact" className="btn-primary gradient-btn-primary home-bk-demo">Book Demo</Link> */}
+          <button className="btn-primary gradient-btn-primary home-bk-demo" onClick={handleBookDemo}>Book Demo</button>
         </div>
       </div>
 

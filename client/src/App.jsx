@@ -8,6 +8,7 @@ import AboutUs from "./pages/about/About";
 import Blogs from "./pages/blogs/Blogs";
 import CenterOfExcellence from "./pages/coe/CenterOfExcl";
 import AiPlatform from "./pages/aiPlatform/AiPlatform";
+import NotFound from "./pages/notFound/NotFound";
 
 // Lazy-loaded pages
 const Home = lazy(() => import("./pages/home/Home"));
@@ -30,6 +31,7 @@ function App() {
               <Route path="/rpc-course-category" element={<RpcCourseCategory />} />
               <Route path="/about" element={<AboutUs />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>
           </div>
