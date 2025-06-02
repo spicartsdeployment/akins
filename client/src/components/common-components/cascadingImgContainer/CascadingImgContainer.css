@@ -129,21 +129,18 @@
     }
 
     .small {
-        width: 22vw;
-        height: 34vw;
-        transform: translateY(10px) scale(0.9);
+        width: 18vw;
+        height: 32vw;
     }
 
     .medium {
-        width: 28vw;
-                height: 40vw;
-        transform: translateY(5px) scale(0.95);
+        width: 25vw;
+        height: 38vw;
     }
 
     .large {
         width: 32vw;
         height: 45vw;
-        transform: translateY(0) scale(1);
     }
 
     .cascading-card img {
