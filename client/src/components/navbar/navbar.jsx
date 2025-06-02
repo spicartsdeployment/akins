@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FaAngleDown, FaAngleRight } from "react-icons/fa6";
 import { dropdownOptions, IMAGES } from "../constant";
 import './Navbar.css';
-
+/* Navbar */
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
