@@ -1,12 +1,11 @@
 // src/pages/Products/Products.jsx
 import React from "react";
-import Seo from "../../components/seo/SEO";
+import Seo from "../../components/common-components/seo/Seo";
 
 const Products = () => {
   return (
     <>
       <Seo
-        title="Products | MyApp"
         description="Explore our diverse products designed to meet your business needs."
         keywords="products, myapp"
       />

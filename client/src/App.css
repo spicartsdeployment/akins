@@ -1,3 +1,13 @@
 .main-layout {
     position: relative;
 }
+
+.routes-container {
+    margin: 5.5rem 0;
+}
+
+@media screen and (max-width: 767px) {
+    .routes-container {
+        margin: 5rem 0;
+    }
+}

@@ -1,0 +1,160 @@
+.cascading-container {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 6rem;
+    text-align: center;
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: auto;
+}
+
+/* .cascading-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+} */
+
+.cascading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.cascade-img-con {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    max-width: 100%;
+}
+
+.cascading-card {
+    background: #000;
+    border: 1px solid #888;
+    border-radius: 12px;
+    padding: 0.75rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s ease;
+    margin-left: -80px;
+    /* overlap effect */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cascading-card:first-child {
+    margin-left: 0;
+}
+
+.cascading-card img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-description {
+    font-size: 1.05rem;
+    padding: 0.75rem 0 0.25rem;
+    color: #fff;
+    line-height: 1.3;
+}
+
+/* Card Sizes */
+.small {
+    width: 260px;
+    height: 320px;
+    opacity: 0.6;
+    transform: translateY(10px) scale(0.9);
+}
+
+.medium {
+    width: 300px;
+    height: 350px;
+    opacity: 0.8;
+    transform: translateY(5px) scale(0.95);
+}
+
+.large {
+    width: 400px;
+    height: 380px;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.small img {
+    height: 240px;
+}
+
+.medium img {
+    height: 280px;
+}
+
+.large img {
+    height: 300px;
+}
+
+.arrow {
+    font-size: 2.2rem;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+    z-index: 10;
+}
+
+.arrow:hover {
+    color: #ff6a00;
+}
+
+/* Responsive */
+@media (max-width: 787px) {
+    .cascading-container {
+        padding: 4rem 1rem;
+    }
+    .arrow {
+        position: absolute !important;
+        color: #fff;
+    }
+
+    .left-arrow {
+        left: -1rem;
+    }
+
+    .right-arrow {
+        right: -1rem;
+    }
+
+    .small {
+        width: 160px;
+        transform: translateY(10px) scale(0.9);
+    }
+
+    .medium {
+        width: 200px;
+        transform: translateY(5px) scale(0.95);
+    }
+
+    .large {
+        width: 250px;
+        transform: translateY(0) scale(1);
+    }
+
+    .cascading-card img {
+        height: 160px;
+    }
+
+    .card-description {
+        font-size: 0.85rem;
+    }
+
+    .cascading-wrapper {
+        padding: 0 1rem;
+    }
+
+    .cascading-card {
+        margin-left: -50px;
+    }
+}

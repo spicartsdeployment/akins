@@ -1,0 +1,74 @@
+/* Section Style */
+.coming-soon-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    padding: 20px;
+}
+
+.content {
+    position: relative;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 8vw;
+    font-weight: 700;
+    margin-bottom: 40px;
+    opacity: 0.5;
+
+    background-image: url("../../assets/images/coehome.jpg");
+    /* replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Drone Image */
+.drone-img {
+    position: absolute;
+    top: -8rem;
+    left: -22rem;
+    width: 80%;
+    transform: rotate(-40deg);
+    /* transform: rotateX(15deg) rotateY(5deg); */
+    transition: transform 0.3s ease;
+}
+
+/* .drone-img:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+} */
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: rotateX(10deg) rotateY(-10deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotateX(10deg) rotateY(-10deg) translateY(-10px);
+    }
+
+    100% {
+        transform: rotateX(10deg) rotateY(-10deg) translateY(0px);
+    }
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 10vw;
+    }
+
+    .drone-img {
+        max-width: 200px;
+    }
+}

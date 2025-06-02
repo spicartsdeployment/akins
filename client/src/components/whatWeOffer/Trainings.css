@@ -1,0 +1,263 @@
+.what-we-offer {
+  color: white;
+  padding: 4rem 6rem;
+  font-family: Arial, sans-serif;
+}
+
+.what-we-offer h2 {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  /* gap: 10px; */
+}
+
+.tab-btn {
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  /* border-radius: 6px; */
+  transition: all 0.3s;
+}
+
+.tab-btn.active {
+  /* border-color: #ff6600; */
+  /* background-color: #222; */
+  color: #000;
+  background-color: #fff;
+}
+
+.offer-content {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.left {
+  flex: 1;
+  min-width: 550px;
+  text-align: start;
+}
+
+.left img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.talk-btn,
+.learn-btn {
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.talk-btn {
+  background-color: #ff6600;
+  color: white;
+}
+
+.talk-btn:hover {
+  background-color: #8e3900;
+}
+
+.learn-btn {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.learn-btn:hover {
+  background-color: #aaa;
+    /* border: 2px solid #aaa; */
+    /* color: #222; */
+}
+
+.right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.right h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+  margin-bottom: 40px;
+  /* Add spacing between each step */
+}
+
+
+.step-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 40px;
+  /* Controls space between step visuals */
+}
+
+.step-visual::after {
+  content: '';
+  width: 2px;
+  height: 100px;
+  position: absolute;
+  background: #fff;
+}
+
+
+.step-number {
+  position: relative;
+  min-width: 30px;
+  height: 30px;
+  border: 2px solid #ff6600;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0.8rem;
+  z-index: 1;
+  background-color: #111;
+}
+
+.step-text {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.step-text ul {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.step-text li {
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+
+/* Cascading images */
+
+
+/* Cascading images */
+
+/* Use case */
+.use-case-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  padding: 6rem 0;
+}
+
+.use-case-card {
+  background: linear-gradient(135deg, #351c0b, #0c1d2d);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.use-case-card:hover {
+  transform: translateY(-5px);
+}
+
+.use-case-card-image {
+  width: 120px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.use-case-card-title {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+
+/* Responsive */
+@media (max-width: 767px) {
+  .what-we-offer {
+    padding: 1rem;
+  }
+
+  .offer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left {
+    min-width: 100%;
+    /* max-width: 100%; */
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  .step-item {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  .step-text {
+    text-align: center;
+  }
+
+  .small {
+    width: 14vw;
+    height: 18vw;
+  }
+
+  .medium {
+    width: 18vw;
+    height: 25vw;
+  }
+
+  .large {
+    width: 22vw;
+    height: 30vw;
+  }
+
+  /* Use case */
+  .use-case-card-container {
+    grid-template-columns: 1fr;
+  }
+}

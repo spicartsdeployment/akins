@@ -1,12 +1,11 @@
 // src/pages/Contact/Contact.jsx
 import React from "react";
-import Seo from "../../components/seo/SEO";
+import Seo from "../../components/common-components/seo/Seo";
 
 const Contact = () => {
   return (
     <>
       <Seo
-        title="Contact Us | MyApp"
         description="Get in touch with us for inquiries or support."
         keywords="contact, myapp"
       />

@@ -12,8 +12,20 @@
     margin-bottom: 1.5rem !important;
 }
 
+.footer-tch-btn-link a:hover {
+    text-decoration: none !important;
+}
+
 .follow-us {
     margin-top: 1rem;
+}
+
+.follow-us p:hover {
+    text-decoration: none !important;
+}
+
+.follow-us-icons-con {
+    display: flex;  
 }
 
 .footer-items {
@@ -30,14 +42,25 @@
     margin-bottom: 0.5rem;
 }
 
+.footer-items a, .footer-items p {
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.footer-items a:hover, .footer-items p:hover {
+    text-decoration: underline;
+}
+
 .footer-logo {
-    width: 100%;
+    width: 80%;
 }
 
 .contact-icons-cont {
     display: flex;
     align-items: center;
 }
+
 .contact-icons-cont p {
     margin-top: 0.3rem;
 }
@@ -61,7 +84,12 @@
 
 @media (max-width: 767px) {
     .footer-container {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 equal columns on small screens */
+        grid-template-columns: 1fr;
+    }
+
+    .footer-policies {
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 0.9rem;
     }
 }

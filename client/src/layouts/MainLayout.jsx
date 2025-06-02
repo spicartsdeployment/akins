@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import ScrollObserver from "../components/intersectObserver/IntersectObserver";
 import Navbar from "../components/navbar/Navbar";
+import ScrollObserver from "../components/common-components/intersectObserver/IntersectObserver";
 
 const MainLayout = () => {
   return (

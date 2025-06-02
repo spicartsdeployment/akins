@@ -1,118 +1,114 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { FaAngleDown, FaAngleRight } from "react-icons/fa6";
+import { dropdownOptions, IMAGES } from "../constant";
 import './Navbar.css';
 
-const Navbar = (props) => {
-  const { setIsRequestDemoOpen } = props;
-  const [activeFlyout, setActiveFlyout] = useState(null);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hoveredDropdown, setHoveredDropdown] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
 
-  // Refs for timeout
-  const flyoutTimeoutRef = useRef(null);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-  const toggleMenu = () => {
-    scrollToTop();
-    setIsMenuOpen((prev) => !prev);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const handleLink = (path) => {
-    console.log('path: ', path);
-    scrollToTop();
+  const handleNavigate = (path) => {
     navigate(path);
-  }
+    setIsMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-  const handleMouseEnter = (flyoutType) => {
-    if (flyoutTimeoutRef.current) {
-      clearTimeout(flyoutTimeoutRef.current);
+  const handleSectionNavigate = (sectionId) => {
+    if (location.pathname !== "/") {
+      navigate(`/#${sectionId}`);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-    setActiveFlyout(flyoutType);
+    setIsMenuOpen(false);
+  };
+
+  const handleMouseEnter = (menu) => {
+    if (!isMobile) setHoveredDropdown(menu);
   };
 
   const handleMouseLeave = () => {
-    flyoutTimeoutRef.current = setTimeout(() => {
-      setActiveFlyout(null);
-    }, 300);
-  };
-
-  const handleLogoClick = () => {
-    navigate('/');
-    scrollToTop();
+    if (!isMobile) setHoveredDropdown(null);
   };
 
   return (
-    <nav
-      className={`navbar ${isScrolled ? 'scrolled' : ''}`}
-      onMouseLeave={handleMouseLeave}
-      aria-label="Main navigation"
-    >
-      {/* Logo */}
-      <div className="logo-con" onClick={handleLogoClick}>
-        <img
-          className="logo"
-          loading="lazy"
-          src={""}
-          alt="Company logo"
+    <nav className="navbar">
+      <div className="logo-con" onClick={() => handleNavigate('/')}>
+        <img className="logo" loading="lazy" src={IMAGES.LogoLight} alt="Company logo"
         />
       </div>
 
-      {/* Desktop Navigation */}
-      <div className="nav-links desktop">
-        {/* Products Dropdown */}
-        <div
-          className={`nav-item ${location.pathname === '/products' ? 'active' : ''}`}
-          onMouseEnter={() => handleMouseEnter('products')}
-          onMouseLeave={handleMouseLeave}
-          aria-haspopup="true"
-          aria-expanded={activeFlyout === 'products' ? 'true' : 'false'}
-        >
-          <span onClick={() => handleLink('/products')} aria-label="Products">
-          AI Platform
-          </span>
+      <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+        {/* Direct Links */}
+        <div className="nav-item" onClick={() => handleNavigate('/ai-platform')}>
+          <span>AI Platform</span>
         </div>
 
-        {/* Other Links */}
-        <Link
-          onClick={scrollToTop}
-          className={`nav-item ${location.pathname === '/pricing' ? 'active' : ''}`}
-          to="/pricing"
-          aria-label="Pricing"
-        >
-          Drone Design & Manufacturing
-        </Link>
+        <div className="nav-item" onClick={() => handleNavigate('/drone-design-and-manufacturing')}>
+          <span>Drone Design & Manufacturing</span>
+        </div>
 
-        
-        <Link
-          onClick={scrollToTop}
-          className={`nav-item ${location.pathname === '/pricing' ? 'active' : ''}`}
-          to="/pricing"
-          aria-label="Pricing"
-        >
-           Center Of Excellence
-        </Link>
+        <div className="nav-item" onClick={() => handleNavigate('/center-of-excellence')}>
+          <span>Center Of Excellence</span>
+        </div>
 
-        
-        <Link
-          onClick={scrollToTop}
-          className={`nav-item ${location.pathname === '/pricing' ? 'active' : ''}`}
-          to="/pricing"
-          aria-label="Pricing"
+        {/* Dropdown Only for Resources */}
+        <div
+          className="nav-item dropdown"
+          onMouseEnter={() => handleMouseEnter('Resources')}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => isMobile && handleSectionNavigate('resources')}
         >
-           Resources
-        </Link>
+          <span>
+            Resources
+            <span className="nav-arrow">
+              {!isMobile && hoveredDropdown === 'Resources'
+                ? <FaAngleRight className="navbar-arrows" />
+                : <FaAngleDown />}
+            </span>
+          </span>
+          {!isMobile && (
+            <div className={`dropdown-menu ${hoveredDropdown === 'Resources' ? 'show' : ''}`}>
+              {dropdownOptions['Resources'].map((option, idx) => (
+                <Link
+                  key={idx}
+                  // to={`/resources/${option.toLowerCase().replace(/\s+/g, '-')}`}
+                >
+                  {option}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
 
-      {/* Sign Up & Request a Demo */}
-      <div className="auth-links desktop">
-        <Link className='navbar-req-link' to="/request-demo" onClick={() => setIsRequestDemoOpen(true)}>
-          <button className="btn-primary">Book Demo</button>
-        </Link>
+      <div className="right-section">
+        <div className="nav-buttons">
+          <Link to="/contact" className="btn-primary gradient-btn-primary home-bk-demo">Book Demo</Link>
+        </div>
+      </div>
+
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className={`bar ${isMenuOpen ? 'open' : ''}`}></div>
+        <div className={`bar ${isMenuOpen ? 'open' : ''}`}></div>
+        <div className={`bar ${isMenuOpen ? 'open' : ''}`}></div>
       </div>
     </nav>
   );
