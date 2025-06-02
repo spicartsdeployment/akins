@@ -1,18 +1,20 @@
 import React from "react";
 import { FaArrowRight, FaInstagram, FaLinkedin, FaPhoneAlt, FaYoutube } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ScrollObserver from "../common-components/intersectObserver/IntersectObserver";
 import { IMAGES } from "../constant";
 import "./Footer.css";
+
+
+const Footer = () => {
+  const navigate = useNavigate();
 
   const handleNavigate = (path) => {
     navigate(path);
     // setIsMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-const Footer = () => {
   return (
     <ScrollObserver>
       <footer className="" style={{ position: "relative", bottom: 0, width: "100%", backgroundColor: "#111", padding: "20px", textAlign: "center" }} >
