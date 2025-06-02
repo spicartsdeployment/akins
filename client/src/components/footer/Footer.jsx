@@ -12,7 +12,6 @@ const Footer = () => {
 
   const handleNavigate = (path) => {
     navigate(path);
-    // setIsMenuOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   return (
