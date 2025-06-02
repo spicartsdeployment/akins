@@ -25,42 +25,22 @@ const Footer = () => {
           </div>
           <div className="footer-items">
             <h3>DEPARTMENTS</h3>
-            {/* <Link to="/center-of-excellence" onClick={() => handleNavigate('/center-of-excellence')}> */}
-              <p onClick={() => handleNavigate('/center-of-excellence')}>Center of Excellence</p>
-            {/* </Link> */}
-            <Link to="/drone-design-and-manufacturing" onClick={() => handleNavigate('/drone-design-and-manufacturing')}>
-              <p>Drone Design and Manufacturing</p>
-            </Link>
+            <p onClick={() => handleNavigate('/center-of-excellence')}>Center of Excellence</p>
+            <p onClick={() => handleNavigate('/drone-design-and-manufacturing')}>Drone Design and Manufacturing</p>
           </div>
           <div className="footer-items">
             <h3>COMPANY</h3>
-            <Link to="/about" onClick={() => handleNavigate('/about')}>
-              <p>About</p>
-            </Link>
-            <Link >
-              <p>Careers</p>
-            </Link>
-            <Link >
-              <p>Locations</p>
-            </Link>
-            <Link >
-              <p>Use Cases</p>
-            </Link>
+            <p onClick={() => handleNavigate('/about')}>About</p>
+            <p>Careers</p>
+            <p>Locations</p>
+            <p>Use Cases</p>
           </div>
           <div className="footer-items">
             <h3>RESOURCES</h3>
-            <Link to="/blogs" onClick={() => handleNavigate('/blogs')}>
-              <p>Blog</p>
-            </Link>
-            <Link >
-              <p>Events</p>
-            </Link>
-            <Link >
-              <p>Contact Us</p>
-            </Link>
-            <Link >
-              <p>Research</p>
-            </Link>
+            <p onClick={() => handleNavigate('/blogs')}>Blog</p>
+            <p>Events</p>
+            <p>Contact Us</p>
+            <p>Research</p>
           </div>
           <div className="footer-items footer-tch-btn-link">
             <Link >
