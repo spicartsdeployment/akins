@@ -3,7 +3,7 @@ import "./CenterOfExcl.css"
 import { coeSessionsData, coeTestimonials, IMAGES, partnerLogos, VIDEOS } from '../../components/constant';
 import WhatWeOffer from '../../components/whatWeOffer/Trainings';
 import EnquiryNow from '../../components/enquiryNow/EnquiryNow';
-import FaqSection from '../../components/faq/FaQ';
+import FaqSection from '../../components/faq/FAQ'
 import ReusableMediaSlider from '../../components/common-components/reusableMediaSlicer/ReusableMediaSlicer';
 import ScrollObserver from '../../components/common-components/intersectObserver/IntersectObserver';
 import TestimonialsSlider from '../../components/common-components/testimonials/Testimonials';
