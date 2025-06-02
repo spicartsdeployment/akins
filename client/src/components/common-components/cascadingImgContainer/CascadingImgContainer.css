@@ -114,6 +114,7 @@
     .cascading-container {
         padding: 4rem 1rem;
     }
+
     .arrow {
         position: absolute !important;
         color: #fff;
@@ -128,17 +129,20 @@
     }
 
     .small {
-        width: 160px;
+        width: 22vw;
+        height: 34vw;
         transform: translateY(10px) scale(0.9);
     }
 
     .medium {
-        width: 200px;
+        width: 28vw;
+                height: 40vw;
         transform: translateY(5px) scale(0.95);
     }
 
     .large {
-        width: 250px;
+        width: 32vw;
+        height: 45vw;
         transform: translateY(0) scale(1);
     }
 

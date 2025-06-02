@@ -350,6 +350,10 @@ button[type="submit"] {
 /* Mobile Responsiveness */
 @media (max-width: 767px) {
 
+    .rpc-btns-container {
+        gap: 1rem;
+    }
+
     .rpc-course-cat-container {
         padding: 4rem 1rem;
     }
@@ -397,5 +401,9 @@ button[type="submit"] {
 
     .rpc-feature {
         max-width: 100%;
+    }
+
+    .rpc-container {
+        padding: 0;
     }
 }

@@ -108,13 +108,18 @@
 }
 
 .slider-buttons button {
-  background-color: #333;
+  background-color: #222;
   color: white;
   border: none;
-  border-radius: 50%;
+  border-radius: 20%;
   padding: 0.75rem;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.slider-buttons button:hover {
+  background-color: transparent;
+  border: 1px solid #ccc;
 }
 
 /* Mobile-friendly */

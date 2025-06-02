@@ -6,6 +6,12 @@ import ScrollObserver from "../common-components/intersectObserver/IntersectObse
 import { IMAGES } from "../constant";
 import "./Footer.css";
 
+  const handleNavigate = (path) => {
+    navigate(path);
+    // setIsMenuOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
 const Footer = () => {
   return (
     <ScrollObserver>
@@ -18,16 +24,16 @@ const Footer = () => {
           </div>
           <div className="footer-items">
             <h3>DEPARTMENTS</h3>
-            <Link to="/center-of-excellence">
+            <Link to="/center-of-excellence" onClick={() => handleNavigate('/center-of-excellence')}>
               <p>Center of Excellence</p>
             </Link>
-            <Link to="/drone-design-and-manufacturing">
+            <Link to="/drone-design-and-manufacturing" onClick={() => handleNavigate('/drone-design-and-manufacturing')}>
               <p>Drone Design and Manufacturing</p>
             </Link>
           </div>
           <div className="footer-items">
             <h3>COMPANY</h3>
-            <Link to="/about">
+            <Link to="/about" onClick={() => handleNavigate('/about')}>
               <p>About</p>
             </Link>
             <Link >
@@ -42,7 +48,7 @@ const Footer = () => {
           </div>
           <div className="footer-items">
             <h3>RESOURCES</h3>
-            <Link to="/blogs">
+            <Link to="/blogs" onClick={() => handleNavigate('/blogs')}>
               <p>Blog</p>
             </Link>
             <Link >

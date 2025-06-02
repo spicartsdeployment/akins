@@ -36,6 +36,28 @@ import bgDroneImg from "../assets/images/bg-drone-img.png"
 // About
 import madam from "../assets/images/madam.png"
 
+// Partner Logos
+import wef from "../../src/assets/images/wef.png";
+import aghub from "../../src/assets/images/aghub.png";
+import agi from "../../src/assets/images/agi.png";
+import aws from "../../src/assets/images/aws.png";
+import cdm from "../../src/assets/images/cdm.png";
+import cii from "../../src/assets/images/cii.png";
+import dst from "../../src/assets/images/dst.png";
+import dstnidhi from "../../src/assets/images/dstnidhi.png";
+import dubaichamber from "../../src/assets/images/dubaichamber.png";
+import gitex from "../../src/assets/images/gitex.png";
+import govap from "../../src/assets/images/govap.png";
+import isb from "../../src/assets/images/isb.png";
+import jssbusiness from "../../src/assets/images/jssbusiness.png";
+import kiettbi from "../../src/assets/images/kiettbi.png";
+import nidhiprayas from "../../src/assets/images/nidhiprayas.png";
+import northstar from "../../src/assets/images/northstar.png";
+import startupindia from "../../src/assets/images/startupindia.png";
+import thub from "../../src/assets/images/thub.png";
+import tsic from "../../src/assets/images/tsic.png";
+
+
 
 export const ICONS = {
   ArrowRight: FaArrowRight,
@@ -71,7 +93,28 @@ export const IMAGES = {
   droneAcquisitiondataimage2: droneAcquisitionDataimage2,
   BgDroneImg: bgDroneImg,
   CourseContent: courseContent,
-  Madam: madam
+  Madam: madam,
+
+  // Partner logos
+  wef,
+  aghub,
+  agi,
+  aws,
+  cdm,
+  cii,
+  dst,
+  dstnidhi,
+  dubaichamber,
+  gitex,
+  govap,
+  isb,
+  jssbusiness,
+  kiettbi,
+  nidhiprayas,
+  northstar,
+  startupindia,
+  thub,
+  tsic,
 };
 
 export const VIDEOS = {
@@ -306,26 +349,25 @@ export const useCaseData = [
 
 // Partnership Logos
 export const partnerLogos = [
-  "/src/assets/images/wef.png",
-  "/src/assets/images/aghub.png",
-  "/src/assets/images/agi.png",
-  "/src/assets/images/aws.png",
-  "/src/assets/images/cdm.png",
-  "/src/assets/images/cii.png",
-  "/src/assets/images/dst.png",
-  "/src/assets/images/dstnidhi.png",
-  "/src/assets/images/dubaichamber.png",
-  "/src/assets/images/gitex.png",
-  "/src/assets/images/govap.png",
-  "/src/assets/images/isb.png",
-  "/src/assets/images/jssbusiness.png",
-  "/src/assets/images/kiettbi.png",
-  "/src/assets/images/nidhiprayas.png",
-  "/src/assets/images/northstar.png",
-  "/src/assets/images/startupindia.png",
-  "/src/assets/images/thub.png",
-  "/src/assets/images/tsic.png",
-  // Add more paths as needed
+  wef,
+  aghub,
+  agi,
+  aws,
+  cdm,
+  cii,
+  dst,
+  dstnidhi,
+  dubaichamber,
+  gitex,
+  govap,
+  isb,
+  jssbusiness,
+  kiettbi,
+  nidhiprayas,
+  northstar,
+  startupindia,
+  thub,
+  tsic,
 ];
 
 // Cascading Images

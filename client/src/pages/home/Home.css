@@ -68,11 +68,11 @@
   margin: 0;
 }
 
-/* .hero-content h1 {
+.hero-content h1 {
   font-size: 3.5rem;
   text-align: center;
   margin-top: 6rem;
-} */
+}
 
 
 .hero-content p,
@@ -623,6 +623,10 @@
     max-width: 80%;
   }
 
+  .roller-track {
+    text-align: center;
+  }
+
   .hero-content p,
   .rec-section-cont p,
   .strategy-section-cont p {
@@ -630,7 +634,7 @@
   }
 
   .home-partners-inner-con h2::after {
-    left: 12%;
+    left: 31%;
   }
 
   .strategy-section-cont p {
@@ -641,7 +645,10 @@
     top: 0.5rem;
   }
 
-  /* .hero-content h1, */
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-top: 0rem;
+  }
   .gradient-text {
     font-size: 2rem;
   }
@@ -664,6 +671,10 @@
 
   .feature-card {
     padding: 20px;
+  }
+
+  .feature-desc {
+    padding: 0;
   }
 
   /* Drone Aqu */

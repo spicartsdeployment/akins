@@ -168,7 +168,7 @@ p {
 :root {
 
   /* Font sizes */
-  --font-display: clamp(1.2rem, 5vw, 3rem);
+  --font-display: clamp(1.2rem, 5vw, 4rem);
   /* Huge title, Hero text */
   --font-h1: clamp(1.6rem, 3vw, 2.8px);
   /* Main headings */

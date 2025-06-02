@@ -58,20 +58,21 @@
 }
 
 .slider-buttons button {
-  background: #222;
-  border: 1px solid #ccc;
+  /* background: #222; */
+  /* border: 1px solid #ccc; */
   padding: 0.6rem;
   font-size: 1.2rem;
-  border-radius: 50%;
+  border-radius: 20%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.slider-buttons button:hover:not(:disabled) {
-  background-color: #666;
-}
+/* .slider-buttons button:hover {
+  background-color: transparent;
+  border: 1px solid #ccc;
+} */
 
 /* .testimonial-slider-wrapper {
   overflow: hidden;
