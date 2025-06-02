@@ -25,9 +25,9 @@ const Footer = () => {
           </div>
           <div className="footer-items">
             <h3>DEPARTMENTS</h3>
-            <Link to="/center-of-excellence" onClick={() => handleNavigate('/center-of-excellence')}>
-              <p>Center of Excellence</p>
-            </Link>
+            {/* <Link to="/center-of-excellence" onClick={() => handleNavigate('/center-of-excellence')}> */}
+              <p onClick={() => handleNavigate('/center-of-excellence')}>Center of Excellence</p>
+            {/* </Link> */}
             <Link to="/drone-design-and-manufacturing" onClick={() => handleNavigate('/drone-design-and-manufacturing')}>
               <p>Drone Design and Manufacturing</p>
             </Link>
