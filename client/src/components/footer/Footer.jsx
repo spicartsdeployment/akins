@@ -38,7 +38,7 @@ const Footer = () => {
           <div className="footer-items">
             <h3>RESOURCES</h3>
             <p onClick={() => handleNavigate('/blogs')}>Blogs</p>
-            <p>Events and Gallery</p>
+            <p onClick={() => handleNavigate('/events-and-gallery')}>Events and Gallery</p>
             <p onClick={() => handleNavigate('/contact-us')}>Contact Us</p>
             <p>Research</p>
           </div>
