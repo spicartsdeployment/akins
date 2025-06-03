@@ -7,7 +7,7 @@ const AiPlatform = () => {
         <section class="coming-soon-section">
             <div class="content">
                 <h1>Coming Soon</h1>
-                <img src={IMAGES.BgDroneImg} alt="Drone Image" class="drone-img" />
+                <img src={IMAGES.BgDroneImg} alt="Drone Image" class="drone-img" loading="lazy"/>
             </div>
         </section>
     )

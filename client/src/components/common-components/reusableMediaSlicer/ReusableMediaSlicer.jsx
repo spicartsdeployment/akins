@@ -31,7 +31,7 @@ const ReusableMediaSlider = ({ sectionTitle = '', mediaData = [], visibleCount =
             {item.type === 'video' ? (
               <video
                 src={item.src}
-                controls autoplay loop playsinline
+                 autoPlay loop muted playsInline
                 style={{ width: '100%' }}
               />
             ) : (
@@ -39,6 +39,7 @@ const ReusableMediaSlider = ({ sectionTitle = '', mediaData = [], visibleCount =
                 src={item.src}
                 alt={item.title}
                 style={{ width: '100%' }}
+                loading="lazy"
               />
             )}
           </div>

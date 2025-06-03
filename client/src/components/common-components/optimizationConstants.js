@@ -62,7 +62,7 @@ export const navbarLinks = [
     { label: "Home", to: "/" },
     { label: "Development", to: "/development" },
     { label: "Services", to: "/services" },
-    { label: "Contact", to: "/contact" },
+    { label: "Contact Us", to: "/contact-us" },
 ];
 
 // Footer Links (for legal and informational sections)

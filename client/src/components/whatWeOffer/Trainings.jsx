@@ -128,7 +128,7 @@ const WhatWeOffer = () => {
       <div className="offer-content">
         {/* Left Column */}
         <div className="left">
-          <img src={activeData.img} alt={activeTab} />
+          <img src={activeData.img} alt={activeTab} loading="lazy"/>
           <div className="button-group">
             <button className="talk-btn">Talk with us</button>
             <button className="learn-btn" onClick={() => handleNavigate("/rpc-course-category", activeTab)}>Learn more</button>
@@ -164,7 +164,7 @@ const WhatWeOffer = () => {
       <div className="use-case-card-container">
         {useCaseData.map((item, index) => (
           <div key={index} className="use-case-card">
-            <img src={item.image} alt={item.title} className="use-case-card-image" />
+            <img src={item.image} alt={item.title} className="use-case-card-image" loading="lazy"/>
             <h3 className="use-case-card-title">{item.title}</h3>
           </div>
         ))}

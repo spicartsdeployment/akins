@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="footer-container" >
           <div className="footer-items">
             <Link >
-              <img className="footer-logo" src={IMAGES.LogoLight} alt="Footer-logo" />
+              <img className="footer-logo" src={IMAGES.LogoLight} alt="Footer-logo" loading="lazy"/>
             </Link>
           </div>
           <div className="footer-items">
@@ -30,16 +30,16 @@ const Footer = () => {
           </div>
           <div className="footer-items">
             <h3>COMPANY</h3>
-            <p onClick={() => handleNavigate('/about')}>About</p>
+            <p onClick={() => handleNavigate('/about-us')}>About Us</p>
             <p>Careers</p>
             <p>Locations</p>
             <p>Use Cases</p>
           </div>
           <div className="footer-items">
             <h3>RESOURCES</h3>
-            <p onClick={() => handleNavigate('/blogs')}>Blog</p>
-            <p>Events</p>
-            <p>Contact Us</p>
+            <p onClick={() => handleNavigate('/blogs')}>Blogs</p>
+            <p>Events and Gallery</p>
+            <p onClick={() => handleNavigate('/contact-us')}>Contact Us</p>
             <p>Research</p>
           </div>
           <div className="footer-items footer-tch-btn-link">

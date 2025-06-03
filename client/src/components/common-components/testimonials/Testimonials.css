@@ -58,8 +58,8 @@
 }
 
 .slider-buttons button {
-  /* background: #222; */
-  /* border: 1px solid #ccc; */
+  background-color: #222;
+  color: white;
   padding: 0.6rem;
   font-size: 1.2rem;
   border-radius: 20%;

@@ -1,19 +1,20 @@
 import { Suspense, lazy } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
-import Footer from "./components/footer/Footer";
-import DroneDesignManufacture from "./pages/droneDesignManufacture/DroneDesignManufacture";
-import RpcCourseCategory from "./components/whatWeOffer/rpcCourseCategory/RpcCourseCategory";
-import AboutUs from "./pages/about/About";
-import Blogs from "./pages/blogs/Blogs";
-import CenterOfExcellence from "./pages/coe/CenterOfExcl";
-import AiPlatform from "./pages/aiPlatform/AiPlatform";
-import NotFound from "./pages/notFound/NotFound";
+import GalleryGrid from "./pages/eventsAndGallery/EventsAndGallery";
 
 // Lazy-loaded pages
 const Home = lazy(() => import("./pages/home/Home"));
 const Products = lazy(() => import("./pages/products/Products"));
 const Contact = lazy(() => import("./pages/contact/Contact"));
+const AboutUs = lazy(() => import("./pages/about/About"));
+const CenterOfExcellence = lazy(() => import("./pages/coe/CenterOfExcl"));
+const DroneDesignManufacture = lazy(() => import("./pages/droneDesignManufacture/DroneDesignManufacture"));
+const RpcCourseCategory = lazy(() => import("./components/whatWeOffer/rpcCourseCategory/RpcCourseCategory"));
+const AiPlatform = lazy(() => import("./pages/aiPlatform/AiPlatform"));
+const Blogs = lazy(() => import("./pages/blogs/Blogs"));
+const Footer = lazy(() => import("./components/footer/Footer"));
+const NotFound = lazy(() => import("./pages/notFound/NotFound"));
 
 function App() {
   return (
@@ -24,13 +25,14 @@ function App() {
             <Route element={<MainLayout />}>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
-              <Route path="/contact" element={<Contact />} />
+              <Route path="/contact-us" element={<Contact />} />
               <Route path="/drone-design-and-manufacturing" element={<DroneDesignManufacture />} />
               <Route path="/ai-platform" element={<AiPlatform />} />
               <Route path="/center-of-excellence" element={<CenterOfExcellence />} />
               <Route path="/rpc-course-category" element={<RpcCourseCategory />} />
-              <Route path="/about" element={<AboutUs />} />
+              <Route path="/about-us" element={<AboutUs />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route path="/events-and-gallery" element={<GalleryGrid />}/>
               <Route path="*" element={<NotFound />} />
             </Route>
         </Routes>

@@ -20,10 +20,7 @@ const CenterOfExcellence = () => {
                 <video
                     className="ceo-home-bg-video"
                     src={VIDEOS.HomeBackgroundVid}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                    autoPlay loop muted playsInline
                 />
                 <div className="ceo-home-content">
                     <h2 className="ceo-home-heading">
@@ -48,7 +45,7 @@ const CenterOfExcellence = () => {
                             </p>
                         </div>
                         <div className="about-ceo-image">
-                            <img src={IMAGES.COEaboutimage} alt="About Center of Excellence" />
+                            <img src={IMAGES.COEaboutimage} alt="About Center of Excellence" loading="lazy"/>
                         </div>
                     </div>
                 </section>
@@ -81,7 +78,8 @@ const CenterOfExcellence = () => {
                                     <div className="logo-item" key={index}>
                                         <img
                                             src={logo}
-                                        //src={IMAGES.DummyImage} alt={`Partner ${index + 1}`} className="partner-logo" 
+                                            alt='partner-logos'
+                                            loading="lazy"
                                         />
                                     </div>
                                 ))}

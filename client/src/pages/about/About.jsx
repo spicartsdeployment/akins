@@ -25,7 +25,7 @@ const AboutUs = () => {
                         <button className="btn-primary gradient-btn-primary abt-cntc-btn">Contact Us</button>
                     </div>
                     <div className="about-image">
-                        <img src={IMAGES.Madam} alt="About Center of Excellence" />
+                        <img src={IMAGES.Madam} alt="About Center of Excellence" loading="lazy"/>
                     </div>
                 </div>
             </section>
@@ -49,7 +49,7 @@ const AboutUs = () => {
                     </div>
 
                     <div className="about-drone-content">
-                        <img src={IMAGES.Madam} alt="Drone" className="about-drone-image" />
+                        <img src={IMAGES.Madam} alt="Drone" className="about-drone-image" loading="lazy"/>
                         <div className="about-drone-text-con">
                             <div className='about-drone-text'>
                                 <p>
@@ -107,7 +107,7 @@ const AboutUs = () => {
                 {/* Explore Services */}
                 <section className="about-drone-section">
                     <div className="about-expr-content">
-                        <img src={IMAGES.Madam} alt="Drone Assembly" className="about-drone-image" />
+                        <img src={IMAGES.Madam} alt="Drone Assembly" className="about-drone-image" loading="lazy"/>
                         <div className="about-drone-text">
                             <h2 className="about-drone-heading">
                                 Our products are designed,<br /> assembled, and supported in <br /> the India.
@@ -139,10 +139,7 @@ const AboutUs = () => {
                     <video
                         className="abt-us-background-video"
                         src={VIDEOS.Forest}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
+                        autoPlay loop muted playsInline
                     />
 
                     <div className="abt-us-cta-overlay">

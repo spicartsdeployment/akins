@@ -99,7 +99,7 @@ const Blogs = () => {
         <>
             <section className="blog-hero">
                 <div className="blog-bnr-inner">
-                    <img src={IMAGES.Madam} alt="Drone" className="blog-bnr-bg-image" />
+                    <img src={IMAGES.Madam} alt="Drone" className="blog-bnr-bg-image" loading="lazy"/>
                     <div className="blog-bnr-overlay" />
                     <div className="blog-bnr-content">
                         <h1>Latest from Akin’s</h1>
@@ -133,7 +133,7 @@ const Blogs = () => {
                             </p>
                             <button className="btn-primary explr-serv-btn">Read Full Article</button>
                         </div>
-                        <img src={IMAGES.Madam} alt="Drone Assembly" className="about-drone-image" />
+                        <img src={IMAGES.Madam} alt="Drone Assembly" className="about-drone-image" loading="lazy"/>
                     </div>
                 </section>
             </ScrollObserver>
@@ -155,10 +155,7 @@ const Blogs = () => {
                     <video
                         className="abt-us-background-video"
                         src={VIDEOS.Forest}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
+                        autoPlay loop muted playsInline
                     />
 
                     <div className="abt-us-cta-overlay">

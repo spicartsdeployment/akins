@@ -49,13 +49,17 @@ const Navbar = ({ onBookDemoClick }) => {
   };
 
   const handleBookDemo = () => {
-     if (onBookDemoClick) onBookDemoClick();
+    if (onBookDemoClick) onBookDemoClick();
   }
 
   return (
     <nav className="navbar">
       <div className="logo-con" onClick={() => handleNavigate('/')}>
-        <img className="logo" loading="lazy" src={IMAGES.LogoLight} alt="Company logo"
+        <img
+          className="logo"
+          loading="lazy"
+          src={IMAGES.LogoLight}
+          alt="Company logo"
         />
       </div>
 
@@ -93,7 +97,7 @@ const Navbar = ({ onBookDemoClick }) => {
               {dropdownOptions['Resources'].map((option, idx) => (
                 <Link
                   key={idx}
-                  // to={`/resources/${option.toLowerCase().replace(/\s+/g, '-')}`}
+                  to={`/${option.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')}`}
                 >
                   {option}
                 </Link>
@@ -101,12 +105,27 @@ const Navbar = ({ onBookDemoClick }) => {
             </div>
           )}
         </div>
+
+        {/* Book Demo link for mobile only */}
+        {isMobile && (
+          <div
+            className="nav-item book-demo-mobile"
+            onClick={() => {
+              handleBookDemo();
+              setIsMenuOpen(false);
+            }}
+            style={{ cursor: 'pointer' }}
+          >
+            <span>Book Demo</span>
+          </div>
+        )}
       </div>
 
       <div className="right-section">
         <div className="nav-buttons">
-          {/* <Link to="/contact" className="btn-primary gradient-btn-primary home-bk-demo">Book Demo</Link> */}
-          <button className="btn-primary gradient-btn-primary home-bk-demo" onClick={handleBookDemo}>Book Demo</button>
+          <button className="btn-primary gradient-btn-primary home-bk-demo" onClick={handleBookDemo}>
+            Book Demo
+          </button>
         </div>
       </div>
 

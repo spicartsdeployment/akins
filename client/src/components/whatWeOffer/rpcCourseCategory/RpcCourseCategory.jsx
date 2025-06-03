@@ -34,12 +34,12 @@ const RpcCourseCategory = () => {
                             <p>{rpcData.headerSection?.description}</p>
                         </div>
                         <div className="rpc-btns-container">
-                            <button to="/contact" className="btn-primary gradient-btn-primary home-bk-demo">Book Course</button>
-                            <button to="/contact" className="btn-primary">Enquiry Now</button>
+                            <button to="/book-course" className="btn-primary gradient-btn-primary home-bk-demo">Book Course</button>
+                            <button to="/enquiry-now" className="btn-primary">Enquiry Now</button>
                         </div>
                     </div>
                     <div className="rpc-img">
-                        <img src={IMAGES.COEaboutimage} alt="About Center of Excellence" />
+                        <img src={IMAGES.COEaboutimage} alt="About Center of Excellence" loading="lazy"/>
                     </div>
                 </div>
             </section>
@@ -81,7 +81,7 @@ const RpcCourseCategory = () => {
             {/* container with image as whole */}
             <ScrollObserver>
                 <div className="course-content-conntainer">
-                    <img src={IMAGES.CourseContent} alt='wewdc afsdvd' />
+                    <img src={IMAGES.CourseContent} alt='wewdc afsdvd' loading="lazy"/>
                 </div>
             </ScrollObserver>
 
@@ -129,7 +129,7 @@ const RpcCourseCategory = () => {
                             <div className="rpc-captcha-box">
                                 <input type="checkbox" />
                                 <span>I'm not a robot</span>
-                                <img src="https://dummyimage.com/60x30/ccc/000&text=CAPTCHA" alt="Captcha" />
+                                <img src="https://dummyimage.com/60x30/ccc/000&text=CAPTCHA" alt="Captcha" loading="lazy"/>
                             </div>
                             <button type="submit">Send Request</button>
                         </form>
@@ -144,6 +144,7 @@ const RpcCourseCategory = () => {
                             className="rpc-certificate-img"
                             src="https://dummyimage.com/300x400/ccc/000&text=CERTIFICATE"
                             alt="Certificate"
+                            loading="lazy"
                         />
                     </div>
                 </div>

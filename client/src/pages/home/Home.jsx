@@ -21,10 +21,7 @@ const Home = () => {
             <video
               className="hero-bg-video"
               src={VIDEOS.HomeBackgroundVid}
-              autoPlay
-              loop
-              muted
-              playsInline
+              autoPlay loop muted playsInline
             />
             <div className='hero-content'>
               <h1 className="heading">
@@ -69,6 +66,8 @@ const Home = () => {
                       <div className="home-logo-item" key={index}>
                         <img
                           src={logo}
+                          alt="home-logo"
+                          loading="lazy"
                         />
                       </div>
                     ))}
@@ -112,9 +111,9 @@ const Home = () => {
                   </div>
                   <div className="feature-image">
                     {product.mediaType === 'video' ? (
-                      <video controls autoPlay loop playsInline src={product.image} alt={product.title} />
+                      <video autoPlay loop muted playsInline src={product.image} alt={product.title} />
                     ) : (
-                      <img src={product.image} alt={product.title} />
+                      <img src={product.image} alt={product.title} loading="lazy"/>
                     )}
                   </div>
                 </div>
@@ -145,9 +144,9 @@ const Home = () => {
                       <p className="acq-description">{aqu.description}</p>
                     </div>
                     {aqu.mediaType === 'video' ? (
-                      <video controls autoPlay loop playsInline src={aqu.image} alt={aqu.title} />
+                      <video autoPlay loop muted playsInline src={aqu.image} alt={aqu.title} />
                     ) : (
-                      <img src={aqu.image} alt={aqu.title} />
+                      <img src={aqu.image} alt={aqu.title} loading="lazy"/>
                     )}
                   </div>
                 </div>
@@ -162,7 +161,7 @@ const Home = () => {
                   <div className="insight-card" key={index}>
                     <div className="insight-content">
                       <p className="insights-description">{aqu.title}</p>
-                      <img className="insight-img" src={aqu.image} alt={aqu.title} />
+                      <img className="insight-img" src={aqu.image} alt={aqu.title} loading="lazy"/>
                     </div>
                   </div>
                 ))}

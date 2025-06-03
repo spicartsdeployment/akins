@@ -229,12 +229,11 @@ export const testimonialsData = [
 export const dropdownOptions = {
   Resources: [
     "About Us",
-    "Contact",
-    "Blogs",
-    "Events and News",
-    "Gallery",
-    "Security",
     "Careers",
+    "Events and Gallery",
+    "Blogs",
+    "Security",
+    "Contact Us",
   ],
 };
 

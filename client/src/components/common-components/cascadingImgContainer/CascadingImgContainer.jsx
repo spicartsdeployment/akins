@@ -32,7 +32,7 @@ const CascadingImageSlider = ({cardData}) => {
               className={`cascading-card ${sizeClasses[index]}`}
               style={{ zIndex: index <= 2 ? index + 1 : 5 - index }}
             >
-              <img src={card.imageUrl} alt={`card-${index}`} />
+              <img src={card.imageUrl} alt={`card-${index}`} loading="lazy" />
               <p className="card-description">{card.description}</p>
             </div>
           ))}

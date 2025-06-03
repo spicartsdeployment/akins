@@ -31,7 +31,7 @@ const PaginatedCardSection = ({ data = [], title = '', itemsPerPage = 3 }) => {
         {getPaginatedItems().map((item, index) => (
           <div className="pagination-card" key={index}>
             <div>
-            {item.image && <img src={item.image} alt={item.title || 'media'} />}
+            {item.image && <img src={item.image} alt={item.title || 'media'} loading="lazy" />}
                 {item.title && <h3>{item.title}</h3>}
             {item.description && <p>{item.description}</p>}
             </div>
