@@ -119,10 +119,10 @@ const Blogs = () => {
 
             {/* Insights from Akin’s */}
             <ScrollObserver>
-                <section className="about-drone-section">
-                    <div className="about-expr-content">
-                        <div className="about-drone-text">
-                            <h2 className="about-drone-heading">
+                <section className="blogs-drone-section">
+                    <div className="blogs-expr-content">
+                        <div className="blogs-drone-text">
+                            <h2 className="blogs-drone-heading">
                                 Insights from Akin’s
                             </h2>
                             <p>
@@ -133,7 +133,7 @@ const Blogs = () => {
                             </p>
                             <button className="btn-primary explr-serv-btn">Read Full Article</button>
                         </div>
-                        <img src={IMAGES.Madam} alt="Drone Assembly" className="about-drone-image" loading="lazy"/>
+                        <img src={IMAGES.Madam} alt="Drone Assembly" className="blogs-drone-image" />
                     </div>
                 </section>
             </ScrollObserver>
@@ -151,16 +151,16 @@ const Blogs = () => {
 
             {/* Blogs - Join us */}
             <ScrollObserver>
-                <section className="abt-us-cta-video-section">
+                <section className="blogs-cta-video-section">
                     <video
-                        className="abt-us-background-video"
+                        className="blogs-background-video"
                         src={VIDEOS.Forest}
                         autoPlay loop muted playsInline
                     />
 
-                    <div className="abt-us-cta-overlay">
-                        <h2 className="abt-us-cta-heading">Join Us on Our Journey to Innovation!</h2>
-                        <a href="#contact" className="abt-us-cta-button">Contact us Today</a>
+                    <div className="blogs-cta-overlay">
+                        <h2 className="blogs-cta-heading">Join Us on Our Journey to Innovation!</h2>
+                        <a href="#contact" className="blogs-cta-button">Contact us Today</a>
                     </div>
                 </section>
             </ScrollObserver>
