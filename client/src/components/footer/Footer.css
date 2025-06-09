@@ -82,6 +82,14 @@
     /* background-color: #f8f9fa; */
 }
 
+.terms-policies {
+    cursor: pointer;
+}
+
+.terms-policies:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 767px) {
     .footer-container {
         grid-template-columns: 1fr;

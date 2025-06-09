@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
+import { IMAGES } from "../../components/constant";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ const ContactUs = () => {
     <div className="contact-container">
       <div className="contact-image">
         <img
-          src="https://undraw.co/api/illustrations/ffb68c1d-cd98-4596-bc56-41b3a6e6e2c2" 
+          src={IMAGES.DummyImage}
           alt="Contact Illustration"
           loading="lazy"
         />

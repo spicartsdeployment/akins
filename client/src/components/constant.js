@@ -152,13 +152,6 @@ export const features = [
     mediaType: 'video'
   },
   {
-    title: "Security & Surveillance",
-    description: " Akin Analytics advances aerial security with AI powered autonomous drones — enabling 24/7 surveillance, instant threat detection, thermal imaging, and geo-fencing for high-risk and restricted environments",
-    button: { text: "Learn More", link: "/infrastructure-monitoring", classNames: "btn-primary btn-arrow", icon: true },
-    image: IMAGES.securityimage,
-    mediaType: 'video'
-  },
-  {
     title: "Center of Excellence",
     description: " Our RPTO-certified academy provides hands-on training in drone operations, safety protocols, and real-time mission execution—accredited by DGCA.",
     button: { text: "Train With Us", link: "/infrastructure-monitoring", classNames: "btn-primary btn-arrow gradient-btn-primary", icon: true },
@@ -232,7 +225,6 @@ export const dropdownOptions = {
     "Careers",
     "Events and Gallery",
     "Blogs",
-    "Security",
     "Contact Us",
   ],
 };
@@ -627,3 +619,53 @@ export const allBlogsData = [
     image: IMAGES.COEaboutimage,
   },
 ];
+
+// Jobs Data
+export const jobData = {
+  fullstack: {
+    title: 'Full Stack Developer with 3+ Years of Experience',
+    postedDate: 'June 1, 2025',
+    responsibilities: [
+      'Build and maintain full-stack web applications',
+      'Work on both frontend (React) and backend (Node.js, Express)',
+      'Integrate APIs and handle database interactions (MongoDB/MySQL)',
+      'Collaborate with UX/UI teams for consistent interfaces',
+      'Write clean, scalable, and maintainable code',
+    ],
+    requirements: [
+      '3+ years experience with JavaScript, React, Node.js',
+      'Familiarity with RESTful APIs, Git, CI/CD',
+      'Understanding of data structures and algorithms',
+    ],
+  },
+  frontend: {
+    title: 'Frontend Developer – React.js & UI/UX',
+    postedDate: 'May 28, 2025',
+    responsibilities: [
+      'Develop responsive UI using React.js',
+      'Implement designs from Figma or Adobe XD',
+      'Optimize performance for mobile and web',
+      'Work closely with backend and design teams',
+    ],
+    requirements: [
+      '2+ years experience with React.js, HTML/CSS',
+      'Strong grasp of JavaScript ES6+, component lifecycles',
+      'Experience with design systems and accessibility standards',
+    ],
+  },
+  backend: {
+    title: 'Backend Developer – Node.js & Database Management',
+    postedDate: 'May 22, 2025',
+    responsibilities: [
+      'Design and develop backend APIs with Node.js',
+      'Manage and optimize databases (MongoDB/MySQL)',
+      'Implement secure authentication and data protection',
+      'Deploy using Docker and CI/CD pipelines',
+    ],
+    requirements: [
+      '3+ years experience with Node.js, Express, databases',
+      'Knowledge of authentication, performance tuning',
+      'Experience with cloud (AWS, Azure, GCP) is a plus',
+    ],
+  },
+};

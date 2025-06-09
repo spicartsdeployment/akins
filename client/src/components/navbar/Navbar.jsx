@@ -95,12 +95,7 @@ const Navbar = ({ onBookDemoClick }) => {
           {!isMobile && (
             <div className={`dropdown-menu ${hoveredDropdown === 'Resources' ? 'show' : ''}`}>
               {dropdownOptions['Resources'].map((option, idx) => (
-                <Link
-                  key={idx}
-                  to={`/${option.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')}`}
-                >
-                  {option}
-                </Link>
+                <p key={idx} onClick={() => handleNavigate('/careers')}>{option}</p>
               ))}
             </div>
           )}

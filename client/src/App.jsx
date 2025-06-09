@@ -2,6 +2,11 @@ import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import GalleryGrid from "./pages/eventsAndGallery/EventsAndGallery";
+import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
+import Services from "./pages/services/services";
+import CareersPage from "./pages/careers/Careers";
+import JobsListPage from "./pages/jobsListPage/JobsListPage";
+import JobDescriptionPage from "./pages/jobsListPage/JobDescriptionPage";
 
 // Lazy-loaded pages
 const Home = lazy(() => import("./pages/home/Home"));
@@ -20,11 +25,12 @@ function App() {
   return (
     <div className="app-wrapper">
       <Suspense fallback={<div>Loading...</div>}>
-          <div className="routes-container">
-        <Routes>
+        <div className="routes-container">
+          <Routes>
             <Route element={<MainLayout />}>
               <Route path="/" element={<Home />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/contact-us" element={<Contact />} />
               <Route path="/drone-design-and-manufacturing" element={<DroneDesignManufacture />} />
               <Route path="/ai-platform" element={<AiPlatform />} />
@@ -32,11 +38,16 @@ function App() {
               <Route path="/rpc-course-category" element={<RpcCourseCategory />} />
               <Route path="/about-us" element={<AboutUs />} />
               <Route path="/blogs" element={<Blogs />} />
-              <Route path="/events-and-gallery" element={<GalleryGrid />}/>
+              <Route path="/events-and-gallery" element={<GalleryGrid />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/jobs" element={<JobsListPage />} />
+              {/* <Route path="/jobs/job-description" element={<JobDescriptionPage />} /> */}
+              <Route path="/jobs/:jobId" element={<JobDescriptionPage />} />
+              <Route path="/terms-and-policies" element={<PrivacyPolicy />} />
               <Route path="*" element={<NotFound />} />
             </Route>
-        </Routes>
-          </div>
+          </Routes>
+        </div>
       </Suspense>
       <Footer />
     </div>

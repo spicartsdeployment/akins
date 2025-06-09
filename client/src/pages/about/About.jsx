@@ -4,6 +4,7 @@ import './About.css';
 import CascadingImageSlider from '../../components/common-components/cascadingImgContainer/CascadingImgContainer';
 import ScrollObserver from '../../components/common-components/intersectObserver/IntersectObserver';
 import TestimonialsSlider from '../../components/common-components/testimonials/Testimonials';
+import MilestoneTimeline from '../../components/common-components/milestones/MilestoneTimeline';
 
 const AboutUs = () => {
     const [activeTab, setActiveTab] = useState('vision');
@@ -73,7 +74,7 @@ const AboutUs = () => {
 
             <ScrollObserver>
                 {/* Milestones */}
-                <section>
+                {/* <section>
                     <div className="milestone-container">
                         <h2 className="section-title">Milestones</h2>
                         <div className="milestone-sidebar">
@@ -96,7 +97,8 @@ const AboutUs = () => {
                             <p>{selectedYear.description}</p>
                         </div>
                     </div>
-                </section>
+                </section> */}
+                <MilestoneTimeline />
             </ScrollObserver>
 
             <ScrollObserver>

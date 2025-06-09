@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="footer-container" >
           <div className="footer-items">
             <Link >
-              <img className="footer-logo" src={IMAGES.LogoLight} alt="Footer-logo" loading="lazy"/>
+              <img className="footer-logo" src={IMAGES.LogoLight} alt="Footer-logo" loading="lazy" />
             </Link>
           </div>
           <div className="footer-items">
@@ -31,7 +31,7 @@ const Footer = () => {
           <div className="footer-items">
             <h3>COMPANY</h3>
             <p onClick={() => handleNavigate('/about-us')}>About Us</p>
-            <p>Careers</p>
+            <p onClick={() => handleNavigate('/careers')}>Careers</p>
             <p>Locations</p>
             <p>Use Cases</p>
           </div>
@@ -76,9 +76,7 @@ const Footer = () => {
         </div>
         <div className="footer-policies">
           <p>Copyright © 2025 Akin Analytics Pvt Limited. All rights reserved.</p>
-          <Link to="/terms-privacy">
-            <p>Terms of Use & Privacy Policy</p>
-          </Link>
+          <p className="terms-policies" onClick={() => handleNavigate('/terms-and-policies')}>Terms of Use & Privacy Policy</p>
         </div>
       </footer>
     </ScrollObserver>

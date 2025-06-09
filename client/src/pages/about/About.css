@@ -1,3 +1,11 @@
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 3rem 6rem;
+}
+
 .about-text {
   flex: 1;
   min-width: 300px;
