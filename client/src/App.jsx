@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
 import GalleryGrid from "./pages/eventsAndGallery/EventsAndGallery";
 import PrivacyPolicy from "./pages/privacyPolicy/PrivacyPolicy";
-import Services from "./pages/services/services";
+import Services from "./pages/services/Services";
 import CareersPage from "./pages/careers/Careers";
 import JobsListPage from "./pages/jobsListPage/JobsListPage";
 import JobDescriptionPage from "./pages/jobsListPage/JobDescriptionPage";
