@@ -26,14 +26,14 @@ const Footer = () => {
           <div className="footer-items">
             <h3>DEPARTMENTS</h3>
             <p onClick={() => handleNavigate('/center-of-excellence')}>Center of Excellence</p>
-            <p onClick={() => handleNavigate('/drone-design-and-manufacturing')}>Drone Design and Manufacturing</p>
+            <p onClick={() => handleNavigate('/indigenous-drones')}>Indigenous Drones</p>
           </div>
           <div className="footer-items">
             <h3>COMPANY</h3>
             <p onClick={() => handleNavigate('/about-us')}>About Us</p>
             <p onClick={() => handleNavigate('/careers')}>Careers</p>
             <p>Locations</p>
-            <p>Use Cases</p>
+            {/* <p>Use Cases</p> */}
           </div>
           <div className="footer-items">
             <h3>RESOURCES</h3>

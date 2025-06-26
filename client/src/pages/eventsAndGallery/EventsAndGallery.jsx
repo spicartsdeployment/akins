@@ -126,7 +126,7 @@ const GalleryGrid = () => {
 
             {/* Info Section */}
             <div className="appointment-info">
-              <h3>“Drones icheynaaa”</h3>
+              <h3> Our partnerships are built on shared values, domain trust and a long-term commitment to solving complex challenges with technology that is both visionary and grounded. </h3>
               <img src={IMAGES.DummyImage} alt="Care" />
             </div>
           </div>

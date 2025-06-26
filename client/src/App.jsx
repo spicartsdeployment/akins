@@ -33,6 +33,7 @@ function App() {
               <Route path="/services" element={<Services />} />
               <Route path="/contact-us" element={<Contact />} />
               <Route path="/drone-design-and-manufacturing" element={<DroneDesignManufacture />} />
+              <Route path="/indigenous-drones" element={<DroneDesignManufacture />} />
               <Route path="/ai-platform" element={<AiPlatform />} />
               <Route path="/center-of-excellence" element={<CenterOfExcellence />} />
               <Route path="/rpc-course-category" element={<RpcCourseCategory />} />

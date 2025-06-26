@@ -65,12 +65,38 @@ const Navbar = ({ onBookDemoClick }) => {
 
       <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
         {/* Direct Links */}
-        <div className="nav-item" onClick={() => handleNavigate('/ai-platform')}>
-          <span>AI Platform</span>
+        {/* <div className="nav-item" onClick={() => handleNavigate('/ai-platform')}>
+          <span>AIP Services</span>
+        </div> */}
+        {/* Dropdown for AIP Services */}
+        <div
+          className="nav-item dropdown"
+          onMouseEnter={() => handleMouseEnter('AIPServices')}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => isMobile && handleNavigate('/ai-platform')}
+        >
+          <span>
+            AIP Services
+            <span className="nav-arrow">
+              {!isMobile && hoveredDropdown === 'AIPServices'
+                ? <FaAngleRight className="navbar-arrows" />
+                : <FaAngleDown />}
+            </span>
+          </span>
+          {!isMobile && (
+            <div className={`dropdown-menu ${hoveredDropdown === 'AIPServices' ? 'show' : ''}`}>
+              {dropdownOptions['AIPServices'].map((option, idx) => (
+                <p key={idx} onClick={() => handleNavigate(option.path)}>
+                  {option.label}
+                </p>
+              ))}
+            </div>
+          )}
         </div>
 
-        <div className="nav-item" onClick={() => handleNavigate('/drone-design-and-manufacturing')}>
-          <span>Drone Design & Manufacturing</span>
+
+        <div className="nav-item" onClick={() => handleNavigate('/indigenous-drones')}>
+          <span>Indigenous Drones</span>
         </div>
 
         <div className="nav-item" onClick={() => handleNavigate('/center-of-excellence')}>
@@ -95,7 +121,9 @@ const Navbar = ({ onBookDemoClick }) => {
           {!isMobile && (
             <div className={`dropdown-menu ${hoveredDropdown === 'Resources' ? 'show' : ''}`}>
               {dropdownOptions['Resources'].map((option, idx) => (
-                <p key={idx} onClick={() => handleNavigate('/careers')}>{option}</p>
+                <p key={idx} onClick={() => handleNavigate(option.path)}>
+                  {option.label}
+                </p>
               ))}
             </div>
           )}

@@ -10,12 +10,12 @@ const milestones = [
   { year: 2003, content: "Entered International Market" },
   { year: 2004, content: "Major Investment Raised" },
   { year: 2005, content: "Award-Winning Innovation" },
-  { year: 2006, content: "IPO Launched" },
-  { year: 2012, content: "Reached 1M Users" },
-  { year: 2013, content: "AI Adoption" },
-  { year: 2014, content: "Smart Solutions Released" },
-  { year: 2015, content: "Partnership with XCorp" },
-  { year: 2016, content: "Market Leader in Region" },
+  // { year: 2006, content: "IPO Launched" },
+  // { year: 2012, content: "Reached 1M Users" },
+  // { year: 2013, content: "AI Adoption" },
+  // { year: 2014, content: "Smart Solutions Released" },
+  // { year: 2015, content: "Partnership with XCorp" },
+  // { year: 2016, content: "Market Leader in Region" },
 ];
 
 const MilestoneTimeline = () => {

@@ -54,14 +54,13 @@ const AboutUs = () => {
                         <div className="about-drone-text-con">
                             <div className='about-drone-text'>
                                 <p>
-                                    At Akin, we take pride in being a trusted drone technology partner. Our drones are designed,
-                                    engineered, and assembled in India, with in-house software development and a carefully managed
-                                    supply chain. This allows us to deliver secure, reliable, and high-performance aerial systems
-                                    tailored for mission-critical operations.
+                                    To become the global standard in AI-augmented drone analytics by delivering autonomous, data-driven solutions that 
+                                    transform how nations secure, build, farm, and sustain—across land, air, sea, and space. We envision positioning India 
+                                    as a DeepTech leader on the global stage, fostering sovereign innovation that addresses critical challenges in defense, 
+                                    infrastructure, agriculture, climate resilience, and smart urban ecosystems.
                                 </p>
                                 <p>
-                                    Each drone we produce reflects our commitment to innovation, quality, and long-term trust
-                                    with government and enterprise clients.
+                                    Our goal is to shape a future where technology not only scales but uplifts—driving impact, inclusion, and sustainability at every altitude.
                                 </p>
                             </div>
 
@@ -115,6 +114,7 @@ const AboutUs = () => {
                                 Our products are designed,<br /> assembled, and supported in <br /> the India.
                             </h2>
                             <p>
+                                
                                 At Akin, we take pride in being a trusted drone technology partner.
                                 Our drones are designed, engineered, and assembled in India, with
                                 in-house software development and a carefully managed supply chain.

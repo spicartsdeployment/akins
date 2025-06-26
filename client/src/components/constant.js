@@ -219,15 +219,33 @@ export const testimonialsData = [
 ];
 
 // Navbar Dropdown data
+// export const dropdownOptions = {
+//   Resources: [
+//     { label: "About Us", path: "/about-us" },
+//     { label: "Careers", path: "/careers" },
+//     { label: "Events and Gallery", path: "/events-and-gallery" },
+//     { label: "Blogs", path: "/blogs" },
+//     { label: "Contact Us", path: "/contact-us" },
+//   ],
+// };
 export const dropdownOptions = {
   Resources: [
-    "About Us",
-    "Careers",
-    "Events and Gallery",
-    "Blogs",
-    "Contact Us",
+    { label: "About Us", path: "/about-us" },
+    { label: "Careers", path: "/careers" },
+    { label: "Events and Gallery", path: "/events-and-gallery" },
+    { label: "Blogs", path: "/blogs" },
+    { label: "Contact Us", path: "/contact-us" },
+  ],
+  AIPServices: [
+    { label: "Infrastructure Monitoring", path: "/aip-services/infra-monitoring" },
+    { label: "Smart City Living", path: "/aip-services/smart-city-living" },
+    { label: "Forest & Environment Monitoring", path: "/aip-services/forest-env-monitoring" },
+    { label: "Disaster Management & Emergency Response", path: "/aip-services/disaster-management" },
+    { label: "Center of Excellence", path: "/aip-services/center-of-excellence" },
+    { label: "Drone Design & Manufacturing", path: "/aip-services/drone-design-manufacturing" },
   ],
 };
+
 
 // coeSessionsData
 export const coeSessionsData = [
