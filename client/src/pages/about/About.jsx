@@ -5,7 +5,7 @@ import CascadingImageSlider from '../../components/common-components/cascadingIm
 import ScrollObserver from '../../components/common-components/intersectObserver/IntersectObserver';
 import TestimonialsSlider from '../../components/common-components/testimonials/Testimonials';
 import MilestoneTimeline from '../../components/common-components/milestones/MilestoneTimeline';
-import Founder from '../../assets/images/founder.jpeg
+import Founder from '../../assets/images/founder.jpeg';
 
 const AboutUs = () => {
     const [activeTab, setActiveTab] = useState('vision');
